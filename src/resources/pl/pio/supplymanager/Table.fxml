@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.pio.supplymanager.Controller">
+   <children>
+      <BorderPane layoutX="50.0" layoutY="164.0" prefHeight="386.0" prefWidth="700.0">
+         <center>
+            <TableView fx:id="productsTable" fixedCellSize="20.0">
+              <columns>
+                <TableColumn fx:id="colName" editable="false" prefWidth="220.0" resizable="false" text="Nazwa" />
+                <TableColumn fx:id="colQuantity" editable="false" prefWidth="50.0" resizable="false" text="Ilość" />
+                  <TableColumn fx:id="colCode" editable="false" prefWidth="60.0" resizable="false" text="Kod" />
+                  <TableColumn fx:id="colCategory" editable="false" prefWidth="100.0" resizable="false" text="Kategoria" />
+                  <TableColumn fx:id="colProducer" editable="false" prefWidth="100.0" resizable="false" text="Producent" />
+                  <TableColumn fx:id="colPrice" editable="false" prefWidth="70.0" resizable="false" text="Cena" />
+                  <TableColumn fx:id="colDescription" minWidth="2.0" prefWidth="73.0" resizable="false" text="Opis" />
+                  <TableColumn fx:id="colSelect" editable="false" maxWidth="1000.0" minWidth="0.0" prefWidth="26.0" resizable="false" sortable="false" />
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <Pane prefHeight="60.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="60.0" prefWidth="700.0" text="LISTA PRODUKTÓW">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <Pane prefHeight="60.0" prefWidth="800.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="800.0" text="SUPPLY MANAGER" textAlignment="CENTER">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="60.0" prefHeight="90.0" prefWidth="800.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="777.0" spacing="15.0">
+               <children>
+                  <Button fx:id="addNewItem" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="53.0" prefWidth="120.0" text="DODAJ PRODUKT" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="53.0" prefWidth="120.0" text="USUŃ PRODUKT" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="53.0" prefWidth="120.0" text="ZAPISZ DANE" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="archiveButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="53.0" prefWidth="120.0" text="ARCHIWIZUJ DANE" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="249.0" spacing="10.0">
+                     <children>
+                        <TextField />
+                        <Button mnemonicParsing="false" text="Szukaj" />
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
